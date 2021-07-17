@@ -40,7 +40,7 @@ function App() {
     let msg = {
       type: "hello",
       apikey: "CF622E65-66D9-4CD3-A022-F4432836A5DA",
-      heartbeat: true,
+      heartbeat: false,
       subscribe_data_type: ["quote"],
       subscribe_filter_asset_id: [pair]
     };
