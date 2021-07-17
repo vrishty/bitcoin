@@ -25,7 +25,6 @@ function App() {
           return pair;
         }
       });
-      console.log("filtered pairs : " + JSON.stringify(filtered));
 
       setcurrencies(filtered);
       first.current = true;
@@ -42,7 +41,7 @@ function App() {
       type: "hello",
       apikey: "CF622E65-66D9-4CD3-A022-F4432836A5DA",
       heartbeat: true,
-      subscribe_data_type: ["exrate"],
+      subscribe_data_type: ["quote"],
       subscribe_filter_asset_id: [pair]
     };
     let jsonMsg = JSON.stringify(msg);
@@ -50,15 +49,14 @@ function App() {
 
     ws.current.onmessage = (e) => {
       let data = JSON.parse(e.data);
-      console.log("data from WS: " + JSON.stringify(data));
-      console.log("pair: " + pair);
-      //every time we receive an event from the websocket for our currency pair, update the price in state
+      // update the price in state
       if (data.asset_id_quote === pair) {
         setprice(data.rate);
       }
     };
   }, [pair]);
 
+  // change of dropdown
   const handleSelect = (e) => {
     setpair(e.target.value);
   };
