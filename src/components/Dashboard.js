@@ -6,7 +6,7 @@ function Dashboard({ price }) {
     } */
     return (
         <div className="dashboard">
-            <h2>{`$${price}`}</h2>
+            <h3>{`$${price}`}</h3>
         </div>
     );
 }

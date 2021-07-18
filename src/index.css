@@ -1,8 +1,6 @@
 .container {
-  margin: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  height: 100vh;
+  margin-top: 20px;
+  text-align: center !important;
 }
 .dashboard {
   display: flex;

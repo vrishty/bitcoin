@@ -63,9 +63,11 @@ function App() {
 
   return (
     <div className="container">
-      <div>Choose a currency to see exchange rate for Bitcoin:
+      <p>Choose a currency to see exchange rate for Bitcoin: </p>
+      <div>
       {
-        <select name="currency" value={pair} onChange={handleSelect}>
+        <select name="currency" value={pair} onChange={handleSelect}
+          className="btn btn-primary">
           {currencies.map((cur, idx) => {
             return (
               <option key={idx} value={cur.asset_id}>
