@@ -2,9 +2,3 @@
   margin-top: 20px;
   text-align: center !important;
 }
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80vh;
-}
